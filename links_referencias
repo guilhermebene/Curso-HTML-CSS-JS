@@ -1,0 +1,25 @@
+tag <a>
+-Tag ¨ancora¨
+-tag possui texto a ser visto pelo usuario
+-possui endereco a ser redirecionado (atributo href=¨seu_link_aqui¨)
+  -url absoluta:
+    -dominio, subdominio
+
+  -url relativa:
+    -links para paginas ¨no mesmo dominio¨, paginas devem estar no mesmo nivel (mesma pasta)
+    -para url em nivel distinto, usar barras para definir diretorios
+-atributo target:
+  -_self  abre na propria aba (eh o target padrao)
+  -_blank  abre nova guia
+  -_top    sobe ate o nivel maximo e abre o conteudo do link
+  -_parent  sobe um nivel e abre o conteudo do link
+-ancora interna
+  -link para alguma parte do documento
+  -usando href=#alguma_coisa
+  -referencia algum elemento com id=¨alguma_coisa¨
+
+tag <img>
+-inserir links absolutos/relativos
+-atributo src contem link para imagem
+-possui atributo alt para descrever conteudo da imagem
+-atributo title: mostra o titulo ao passar o mouse sobre uma imagem
