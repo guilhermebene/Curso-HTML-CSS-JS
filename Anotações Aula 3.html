@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Anotações Aula 3</title> <!-- 22/01/18 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Anotações 22/01/2018</h1>
+        
+        <h2>Tabelas </h2>
+            Tags:
+            <ul>
+                <li>table: Cria a tabela</li>
+                <li>tr: Define uma linha da tabela</li>
+                <li>th: Denotam títulos</li>
+                <li>td: Denotam dados</li>
+            </ul>
+            Usamos thead, tfoot e tbody para denotar o cabeçalho, corpo e rodapé. Usá-los pois permite melhor impressão
+
+            <br><br> Exemplo de tabela: 
+            <br> <table>
+                <caption>Carros</caption>
+                    <colgroup>
+                            <col span="2" style="background-color:#C0C0C0"> <!-- O span="2" define que apenas as duas primeiras colunas serão afetadas--> 
+                            <col style="background-color:#A0A0A0">
+                    </colgroup>  
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Ano</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"> Última atualização: 06/2012 </td> <!-- colspan define quantas colunas a célula ocupa -->
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Toyota</td> <!-- rowspan define quantas linhas a célula ocupa -->
+                            <td>Corolla</td>
+                            <td>2010</td>
+                        </tr>
+                        <tr>
+                            <td>Camry</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Honda</td> <!-- rowspan define quantas linhas a célula ocupa -->
+                            <td>Civic</td>
+                            <td>2004</td>
+                        </tr>
+                        <tr>
+                            <td>Fit</td>
+                            <td>2012</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td>Mitsubishi</td>
+                            <td>Lancer</td>
+                            <td>2012</td>
+                        </tr>
+                    </tbody>
+            </table>
+                
+        <br>
+            
+        <h2>Formulários</h2>
+        Vamos criar um formulário com a tag form. Dentro dela teremos diversas opções. Os dados serão obtidos por PHP a partir dos parâmetros action e method.
+        <br> O parâmetro method pode ser definido como "post" ou "get"
+        <br><br> Tags:
+        <ul>
+            <li>input type = "text": Caixa de texto. Usamos name (identifica o conteúdo), placeholder (O que aparece escrito para o usuário) e id para definir o significado do input</li>
+            <li>input type = "password": Omite o conteúdo digitado. É exposto na URL caso seja usado o método get. Usar método post caso haja senhas</li>
+            <li>label for = id: Dá o rótulo do input. Importante para acessibilidade, pois ao ser clicado, começa a esperar o input</li>
+            <li>input type = "submit": Botão de envio. Também poderíamos usar a tag button com parâmetro type = "submit"</li>
+            <li>input type = "search": input focado em pesquisa</li>
+            <li>input type = "number": input apenas para números. Possível definir valores mínimo e máximos do intervalo mostrado. Pode-se mudar o step de variação dos números mostrados</li>
+            <li>input type = "range": input com barra selecionável arrastável. Define-se valores para cada posição, mas ele não é mostrado</li>
+            <li>input type = "email": esse input requere formato válido de email</li>
+            <li>input type = "tel": apenas aceita formato de telefone</li>
+            <li>input type = "url": apenas aceita formato de URL, incluindo http://</li>
+            <li>input type = "date": aceita apenas formato de data e abre menu de calendário. A ordem de dd/mm/yy depende do sistema operacional</li>
+            <li>input type = "datetime-local", "month", "week", "time": atuam análogo ao date </li>
+            <li>textarea: campo de texto com tamanho definível e redimensionável pelo usuário. Não é void! Valores entre as tags serão preenchidos na textarea</li>
+        </ul>
+        
+        Exemplo de formulário básico: 
+        <br> <form action="parametros.php" method="post">
+			<label for="nome_id">Nome: </label>
+			<input id="nome_id" type="text" name="nome" placeholder="Seu nome">
+			
+			<label for="estado_id">Estado: </label>
+			<input id="estado_id" type="text" name="estado" placeholder="Seu estado">
+			
+			<input type="submit" value="Enviar">
+		</form>
+       
+        <br> Exemplo de diferentes input types
+        <form>
+            <label for="keywords_id">Busca: </label>
+            <input id="keywords_id" type="search" name="keywords" placeholder="Keywords">
+            
+            <br>			
+
+            <label for="idade_id">Idade: </label>
+            <input id="idade_id" type="number" name="idade" min="18" max="60" step="2">
+
+            <br>
+
+            <label for="curtiu_id">Curtiu: </label>
+            <input id="curtiu_id" type="range" name="curtiu" min="0" max="10">
+
+            <br>
+
+            <label for="email_id">Email: </label>
+            <input id="email_id" type="email" name="email" placeholder="Seu email">
+
+            <br>
+
+            <label for="telefone_id">Telefone: </label>
+            <input id="telefone_id" type="tel" name="telefone" placeholder="Seu telefone">
+
+            <br>
+
+            <label for="site_id">Site: </label>
+            <input id="site_id" type="url" name="site" placeholder="Seu site">
+
+            <br>
+
+            <label for="nascimento_id">Nascimento: </label>
+            <input id="nascimento_id" type="date" name="nascimento">
+
+            <br>
+            
+            <label for="festa_aniversario_id">Festa de Aniversário: </label>
+            <input id="festa_aniversario_id" type="datetime-local" name="festa_aniversario">
+            
+            <br>
+
+            <label for="proximo_carnaval_mes_id">Mês do próximo Carnaval: </label>
+            <input id="proximo_carnaval_mes_id" type="month" name="proximo_carnaval_mes">
+
+            <br>
+
+            <label for="semana_rock_in_rio_id">Semana do Rock in Rio: </label>
+            <input id="semana_rock_in_rio_id" type="week" name="semana_rock_in_rio">
+
+            <br>
+
+            <label for="horario_de_entrada_id">Horário de entrada: </label>
+            <input id="horario_de_entrada_id" type="time" name="horario_de_entrada">
+
+            <br>
+
+            <label for="senha_id">Senha: </label>
+            <input id="senha_id" type="password" name="senha" placeholder="Sua senha">
+
+            <br>
+
+            <label for="mensagem_id">Mensagem: </label>
+            <textarea id="mensagem_id" name="mensagem" rows="3" cols="30" maxlength="150"></textarea>
+
+            <br>
+			
+            <input type="submit" value="Enviar">
+            
+        </form>
+
+
+        <br><br> <b>Checboxes:</b> usar input type="checkbox". O atributo checked permite inicializar selecionado
+
+        <br><br> Exemplo de checkboxes: 
+
+        <form action="parametros.php" method="post">
+                    <label for="java_id">Java</label>
+                    <input id="java_id" type="checkbox" value="java" name="linguagens" checked>
+
+                    <label for="csharp_id">C#</label>
+                    <input id="csharp_id" type="checkbox" value="csharp" name="linguagens">
+
+                    <label for="php_id">PHP</label>
+                    <input id="php_id" type="checkbox" value="php" name="linguagens">
+
+                    <label for="ruby_id">Ruby</label>
+                    <input id="ruby_id" type="checkbox" value="ruby" name="linguagens" checked>
+
+                    <label for="perl_id">Perl</label>
+                    <input id="perl_id" type="checkbox" value="perl" name="linguagens">
+
+                    <input type="submit" value="Enviar">
+        </form>
+        
+        <br><br> <b>Radios:</b> funciona igualmente ao checkbox, usar input type="radio". O atributo checked permite inicializar selecionado
+        
+        <br><br> Exemplo de radios:
+        
+        <form action="parametros.php" method="post">
+            <label for="sp_id">São Paulo</label>
+            <input id="sp_id" type="radio" value="sao-paulo" name="time-preferido" checked>
+
+            <label for="barcelona_id">Barcelona</label>
+            <input id="barcelona_id" type="radio" value="barcelona" name="time-preferido">
+
+            <label for="milan_id">Milan</label>
+            <input id="milan_id" type="radio" value="milan" name="time-preferido">
+
+            <label for="mu_id">Manchester United</label>
+            <input id="mu_id" type="radio" value="manchester-united" name="time-preferido">
+
+            <label for="bdm_id">Bayern de Munique</label>
+            <input id="bdm_id" type="radio" value="bayern-munique" name="time-preferido">
+
+            <input type="submit" value="Enviar">
+	</form>
+        
+        <br><br> <b>Colors:</b> permite a seleção de cores. Cor expressada em hexadecimal
+        
+        <br><br> Exemplo de colors:
+        <form action="parametros.php" method="post">
+            <label for="cor_id">Cor: </label>
+            <input id="cor_id" name="cor" type="color">
+
+            <input type="submit" value="Enviar">
+	</form>
+        
+        <br><br> <b>Botões:</b> podem ser usados para selecionar documentos (type="file"). Pode-se usar imagens como botões (type="image" ou img). Usamos as tags input ou button, depende do caso. 
+        <br> Normalmente usa-se button pois não é void e podemos colocar tags dentro dele. Assim, podemos inserir imagens no botão. O type="reset" volta aos valores iniciais do formulário
+        
+        <br><br> Exemplos de diferentes botões:
+        <form action="parametros.php" method="post" enctype="multipart/form-data">
+            <input id="file_id" type="file" name="file">		
+
+            <input id="b1" type="button" value="Botão genérico">
+
+            <button id="b2" type="button">
+                    Botão genérico
+                    <img src="http://www.k19.com.br/figs/botao-generico.png" alt="Botão">
+            </button>
+
+            <input id="b3" type="reset" value="Reiniciar">
+
+            <button id="b4" type="reset">
+                    Botão de reset
+                    <img src="http://www.k19.com.br/figs/botao-reset.png" alt="Reiniciar">
+            </button>
+
+            <input id="b5" 
+                    type="image"
+                    alt="enviar"
+                    src="http://www.k19.com.br/figs/submit.png">
+        </form>
+        
+        <br><br> <b>Dropdown list:</b> Lista com itens já definidos a serem escolhidos. Duas possibilidades. Mais de um valor pode ser escolhido
+        
+        <br><br> Exemplos de dropdown list:
+        
+        <form action="parametros.php" method="post">
+            <select id="estados_id" name="estados" multiple="multiple">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="BA">Bahia</option>
+            </select>
+
+            <select id="estado_id" name="estado">
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="BA">Bahia</option>
+                </optgroup>
+            </select>
+
+            <input type="submit" value="Enviar">
+            </form>
+        
+    </body>
+</html>
