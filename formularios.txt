@@ -1,0 +1,36 @@
+Formularios
+
+<form>
+-Atributo form
+  -URL para onde os dados inseridos no formulario sao enviados
+-Atributo method
+  -Metodo do empacotamento e transmissao dos dados
+  -Metodo POST
+  -Metodo GET
+    -dados enviados na submissao ficam na url da pagina, apos um ponto de interrogacao
+
+<label>
+-Rotulo de um campo de formulario
+-atributo for
+  -representa o id do elemento <input> ao qual o <label> se relaciona
+
+<input>
+-atributo id
+  -nome do campo
+  -chave ou identificador unico em relacao ao documento desse campo
+-atributo type
+  -tipo de input (caixa de texto, botao)
+-atributo name
+  -nome que identifica o que deve ser inserido no campo
+-atributo placeholder
+  -o que esta escrito inicialmente no campo
+  -aparece enquanto nada estiver escrito no campo de insercao
+-atributo value
+  -valor fixo presente no campo
+
+  CRIAR BOTAO DE ENVIO
+  -sem label
+  -atributo type=¨submit¨
+  -atributo value
+    -valor a ser enviado
+    -em geral, nome do botao escrito `enviar` ou `send` ou `submit`

@@ -1,0 +1,33 @@
+Tabelas
+<thead>
+-Tag cabecalho
+
+<tfoot>
+-Tag rodape
+
+<tbody>
+-Tag corpo da Tabelas
+
+Colspan
+Atributo numero de colunas ocupadas por um elemento
+
+Rowspan
+Atributo do numero de linhas ocupadas por um certo elemento
+
+<tr>
+-Tag de linha da tabela (table row)
+
+<td>
+-Tag de elemento da tabela
+
+<caption>
+-Titulo da Tabelas
+
+<colgroup>
+-alterar ¨estilo¨
+-definir grupo de colunas->facilita alteracao com CSS
+
+<col>
+-Tag tipo void
+-atributo style da caracteristicas de estilo
+-atributo span da numero de colunas inclusas no estilo
