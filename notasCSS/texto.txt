@@ -1,0 +1,19 @@
+-color
+  >altera cor de texto
+
+-text-align
+  >alterar posicionamento do texto
+
+-text-decoration
+  >colocar linhas no texto
+  >sublinhar
+  >overline
+  >riscar (line-through)
+
+-text-transform
+  >capitalize (cada palavra fica com letra maiuscula)
+  >uppercase (CAPS LOCK)
+
+-text-indent
+  >identacao do texto
+  >apenas a primeira linha identada
