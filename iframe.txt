@@ -1,7 +1,0 @@
-IFRAME
--Contem src=¨insira_url¨
--Carrega um documento html dentro de uma certa regiao de outro documento html
--Recomenda-se nao utilizar
--Pode-se fazer insecoes recursivas de paginas usando iframe
--eh possivel criar um ¨name¨ em alguma das paginas presentes no iframe e
-usar o nome no target do iframe que esta sendo editado
