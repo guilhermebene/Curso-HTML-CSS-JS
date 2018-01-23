@@ -1,0 +1,97 @@
+Character Entity
+-Caracteres especiais
+-Espaço
+-Etc
+
+Tag <br>
+-Quebra de linha
+-Tag tipo void
+
+tag <p></p>
+-Tag de paragrafo
+
+tag <pre>
+-Texto pré-formatado
+
+tag <code>
+-Inserção de código fonte em linguagens de programção
+-Puramente semântico
+-Não tem aparência visual distinta
+
+tag <i>
+-uso para termos cientificos
+-uso para termos estrangeiros
+
+tag <b>
+-Tag de palavra-chave
+
+tag <strong>
+-trecho de texto relevante
+-pode ser usado para dar aviso
+-chamar atencao
+-aspecto semantico
+
+tag <em>
+-¨emphasize¨
+-serve para dar enfase
+-aspecto semantico
+
+tag <sup>
+-sobrescrever
+-potencias de numeros
+
+tag <sub>
+-subescrever
+-exemplo: numeros em componentes quimicos, indices
+
+tag <blockquote>
+-inserir citacao
+-citacao longa
+-block level
+
+tag <q>
+-citacao curta
+-inline level
+-navegador pode inserir aspas
+
+tag <cite>
+-citar nome de alguma coisa
+-citar obras artisticas
+-pode ser atributo das tags <q> e <blockquote>
+
+LANG lang=¨pt-br¨
+-indica que tudo dentro de certa tag esta em algum idioma especifico
+
+tag <abbr>
+-abreviacao
+-indica-se o nome conpleto e a sigla/abreviacao
+-ao passar o mouse sobre a sigla/abreviacao, aparece o texto completo
+
+tag <dfn>
+-indica que algo esta sendo definido
+-definicao
+-exemplo de uso: wikipedia, dicionario, enciclopedia
+
+tag <ins>
+-indica insercao
+-informacao que nao estava contida no texto original
+-informacao complementada em alguma alteracao do Texto
+
+tag <del>
+-informacao retirada do texto original
+-em geral representada como texto riscado
+
+tag <s>
+-substituicao
+-substitui algum trecho de texto que antes estava presente no texto original
+
+DATAS E HORAS
+  PADRAO: ano-mes-dia
+
+  tag <time>
+  -indica tempo
+  -pode-se associar texto a algum periodo de tempo usando datetime=¨12-25-2017¨
+
+tag <mark>
+-serve para marcar/destacar texto
+-tem funcao visual
