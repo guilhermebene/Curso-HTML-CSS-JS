@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Anotações Aula 4</title> <!-- 23/01/18 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Anotações Aula 4.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Anotações 23/01/2018</h1>
+        <h2>Continuação sobre formulários</h2>
+        <ul>
+            <li><b>Tag fieldset:</b> usado para criação de vários textboxes em um formulário, de forma que fiquem agrupados de forma racional
+                <br><br> Exemplo de uso:
+                <br>
+		<form action="parametros.php" method="post">
+			<fieldset>
+				<legend>Dados Pessoais</legend>
+				<label for="nome_id">Nome: </label>
+				<input id="nome_id" type="text" name="nome">
+			</fieldset>
+			<fieldset>
+				<legend>Formação</legend>
+				<label for="curso_id">Curso: </label>
+				<input id="curso_id" type="text" name="curso">
+			</fieldset>
+			<fieldset>
+				<legend>Experiência</legend>
+				<label for="empresa_id">Empresa: </label>
+				<input id="empresa_id" type="text" name="empresa">
+			</fieldset>
+
+			<input type="submit" value="Enviar">
+		</form>
+            </li>
+            
+            <br>
+            
+            <li><b>Autocomplete:</b> usamos o parâmetro list num input vinculado ao id de uma datalist tag. Usado para criar listas de autocomplete. Poderia ser feito via js
+                <br>No datalist listamos elementos usando a tag option e colocamos a palavra desejada no parâmetro value=""
+                <br><br> Exemplo de uso:
+                <br> 
+                    <form action="parametros.php" method="post">
+			<input id="comida_id" name="comida" type="text" list="comidas_id">
+			
+			<datalist id="comidas_id">
+				<option value="Lasanha">
+				<option value="Pizza">
+				<option value="Sopa">
+				<option value="Salada">
+			</datalist>
+
+			<input type="submit" value="Enviar">
+                    </form> 
+            
+            </li>
+            
+            <br>
+            
+            <li><b>Campos ou botões desabilitados e campos fixo:</b> Usamos os parâmetros disabled ou readonly, respectivamente
+                <br> Read-only tem o valor enviado. Disabled não envia valor algum. Facilmente burláveis se apenas feito em HTML
+                <br><br> Exemplo de uso:
+                <br>
+                    <form action="parametros.php" method="post">
+			<label for="nome_id">Nome: </label>
+			<input id="nome_id" name="nome" type="text" value="Read-Only" readonly>
+
+			<label for="email_id">Email: </label>
+			<input id="email_id" name="email" type="email" value="Disabled" disabled>
+
+			<input type="submit" value="Enviar">
+                    </form>
+                
+            </li>
+                  
+            <br>
+            
+            <li><b>Validação:</b> usando o parâmetro required um campo passa a ser obrigatório. Validação de formato depende do type.
+                <br>Podemos usar o parâmetro pattern para definir um certo padrão de input text. Usa-se expressão regular (regex).
+                <br>Podemos definir um texto explicando o formato usando o parâmetro title=""
+                <br><br>Exemplo de uso:
+                <br>
+                    <form action="parametros.php" method="post">
+			<label for="nome_id">Nome: </label>
+			<input id="nome_id" name="nome" type="text" required>
+
+			<label for="email_id">Email: </label>
+			<input id="email_id" name="email" type="email">
+
+			<label for="url_id">Site: </label>
+			<input id="url_id" name="url" type="url">
+
+			<label for="placa_id">Placa: </label>
+			<input
+				id="placa_id"
+				name="placa"
+				type="text"
+				pattern="[A-Z]{3}[0-9]{4}"
+				title="As placas são formadas por 3 letras e 4 números">
+
+			<input type="submit" value="Enviar">
+                    </form>
+             
+            </li>
+            
+            <br>
+            
+            <li><b>Partes de um documento HTML / Agrupamentos:</b> (listados aqui e explicados na apostila, a partir da p. 117)
+                <ul>
+                    <li>div: define uma divisão genérica do conteúdo. Block-level element. Antes do HTML 5, todos os elementos abaixo eram divs. 
+                        <br>Para maior semântica foram criadas as tags acima</li>
+                    <li>span: funciona como div mas é In-Line element</li>
+                    <li>header: define um cabeçalho</li>
+                    <li>footer: define um rodapé</li>
+                    <li>nav: define um menu de navegação</li>
+                    <li>article: define um artigo do conteúdo. Deve ser um agrupamento auto-suficiente</li>
+                    <li>aside: define um conteúdo secundário do documento</li>
+                    <li>section: define uma seção genérica</li>
+                    <li>figure: o elemento figure deve ser utilizado para definir um conteúdo que é auto-suficiente e tipicamente referenciado como uma 
+                        <br>unidade singular do fluxo principal do documento. Não deve ser algo cujo article necessite da figure. Normalmente usado para imagens</li>
+                    <li>figcaption: coloca legenda na sua tag figure mãe. Deve ser sempre aninhado a uma figure</li>
+                    <li>hr: linha horizontal</li>
+                </ul>               
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        
+        <h2>CSS</h2>
+        <div id="paragrafo1"> <div id="paragrafo2">Responsável pelo estilo do documento. Podemos usar uma tag style, dentro do html, dentro da tag head para definir para todo o documento. 
+            <br> Podemos usar um parâmetro style para definir o estilo de uma tag. Podemos também usar um arquivo externo, chamada pela tag link na tag head </div>
+        </div>
+        O estilo pode ser definido para uma certa tag ou pode-se criar um id para um uso específico de uma tag. 
+        <br>Para uma tag, basta usar: nomeDaTag{ }
+        <br>Caso seja um id, usamos: #nomeDoId{ }
+        
+        <br><br>Conteúdos vistos na aula sobre CSS: 
+        <ul>
+            <li>Backgrounds</li>
+            <li>Textos</li>
+        </ul>
+    </body>
+</html>

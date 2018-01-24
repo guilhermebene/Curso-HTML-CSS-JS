@@ -1,0 +1,24 @@
+/*
+Comentário
+*/
+/* 
+    Created on : 23/01/2018, 20:26:28
+    Author     : guivecchi
+*/
+
+#paragrafo1 {
+    color: white;
+    font-size: 15px;
+    font-family: "Arial";
+    border: 3px solid grey;
+    padding: 10px;
+    margin: 6px;
+    background-color: #72e5be;
+}
+
+#paragrafo2 {
+    border: 5px dashed rgb(230,230,230);
+    margin: 6px;
+    padding: 3px;
+    background-color: #9975b9;
+}
