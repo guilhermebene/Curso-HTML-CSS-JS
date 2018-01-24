@@ -1,0 +1,253 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/01/2018, 19:07:30
+    Author     : guivecchi
+*/
+
+#p1 {
+	width: 400px;
+	color: blue;
+	text-align: justify;
+	text-decoration: line-through;
+	text-transform: uppercase;
+	text-indent: 20px;
+	letter-spacing: 2px;
+	line-height: 25px;
+	word-spacing: 11px;
+        border: 2px black solid;
+}
+
+#p2 {
+	width: 100px;
+	word-wrap: break-word;
+        border: 2px black solid;
+}
+
+#p3 {
+	width: 400px;
+	white-space: pre-line;
+        border: 2px black solid;
+        font-family: "sans-serif"; 
+}
+
+#p4 {
+        font-size: 20px;
+        font-family: "sans-serif";  
+	width: 200px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-shadow: 3px 3px 2px rgb(100, 100, 240);
+        border: 2px black solid;
+}
+
+#p5 { 
+	width: 400px;
+	font-family: "Bungee Shade", "Georgia", "Courier New", "sans-serif";
+	font-size: xx-large;
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: bold;
+        border: 2px black solid;
+}
+
+#p6 {
+        width: 400px;
+        font-size: 20px;
+	font-family: 'Supermercado One';
+        border: 2px black solid;
+}
+
+#ul1 { 
+	list-style-type: square;
+	list-style-position: inside;
+        border: 2px black solid;
+	width: 400px;
+}
+
+#ul2 { 
+	list-style-image: url('http://k19.com.br/figs/k02-logo-small.png');
+        border: 2px black solid;
+	width: 400px;
+}
+
+ol {
+	list-style-type: upper-roman;
+}   
+
+#div1 {
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+        
+        border-style: solid;
+	border-width: thin;
+	border-color: red;
+	border-radius: 10px;
+}
+
+#div2 {
+        width: 200px;
+	height: 100px;
+	margin: 10px;
+        
+	border-style: dotted;
+	border-color: yellow;
+	border-radius: 10px 30px;
+}
+
+#div3 {
+        width: 200px;
+	height: 100px;
+	margin: 10px;
+        
+	border-style: dashed;
+	border-width: 4px;
+	border-color: blue;
+	border-radius: 10px 20px 30px 40px;
+}
+
+#div4 {
+        width: 200px;
+	height: 100px;
+	margin: 10px;
+        
+	border-style: double;
+	border-width: 8px;
+	border-color: green;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 40px;
+}
+
+#div5 {
+        width: 200px;
+	height: 100px;
+	margin: 10px;
+        
+	border-left-style: solid;
+	border-left-width: thin;
+	border-left-color: red;
+	
+	border-top-style: dotted;
+	border-top-color: yellow;
+	
+	border-right-style: dashed;
+	border-right-width: 4px;
+	border-right-color: blue;
+	
+	border-bottom-style: double;
+	border-bottom-width: 8px;
+	border-bottom-color: green;
+}
+
+table, td {
+	font-size: xx-large;
+	border: 1px solid black;
+	margin: 10px;
+}
+
+#tabela1 {
+	border-collapse: collapse;
+}
+
+#tabela2 {
+	border-spacing: 20px;
+}
+
+#div6 {
+	outline-style: solid;
+	outline-color: red;
+	outline-width: 4px;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div7 {
+	outline-style: dashed;
+	outline-color: blue;
+	outline-width: 2px;
+	outline-offset: -20px;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div8 {
+	outline-style: solid;
+	outline-color: green;
+	outline-width: 4px;
+	outline-offset: 20px;
+		width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div9 {
+	box-shadow: 10px 10px gray;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div10 {
+	box-shadow: 10px 10px 5px gray;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div11 {
+	box-shadow: inset 10px 10px gray;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#div12 {
+	box-shadow: inset 10px 10px 5px gray;
+	width: 200px;
+	height: 100px;
+	border: 4px solid black;
+	margin: 50px;
+}
+
+#p7 {
+	margin: 5px 10px 20px 30px;
+	padding: 5px 0px 0px 20px;
+	border: 1px solid black;
+}
+
+#a1 {
+	margin-left: 10px;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+#a2 {
+	margin-left: 20px;
+	padding: 10px;
+	border: 1px solid black;	
+}
+
+#p8 {
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#div13 {
+	width: 600px;
+	border: 1px solid black;
+}
